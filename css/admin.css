@@ -1,0 +1,87 @@
+/* NAVBAR */
+  nav {
+    background: #1e1e1e;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  nav a.logo {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background: var(--fondo-card);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0.3rem 0;
+  }
+
+  .menu-toggle:checked + label + .nav-links {
+    display: flex;
+  }
+
+/* Título principal */
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Formulario */
+.persona-form {
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor de campos usando Flexbox */
+.persona-form .flex {
+  display: flex; /* contenedor flex */
+  flex-wrap: wrap; /* permite salto de línea */
+  gap: 1rem; /* separación entre elementos */
+}
+
+/* Cada etiqueta ocupa mínimo 200px y crece según espacio */
+.persona-form .flex label {
+  flex-grow: 1; /* el elemento puede crecer para ocupar espacio disponible */
+  flex-shrink: 1; /* el elemento puede encogerse si no hay suficiente espacio */
+  flex-basis: 200px; /* tamaño inicial preferido del elemento (mínimo base) */
+}
+
+/* Imágenes en la tabla */
+table img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Espaciado en botones de acción */
+table button {
+  margin-right: 0.25rem;
+}
