@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+  <nav>
+    <a href="#" class="logo">GameStore</a>
+ 
+    <!-- Checkbox oculto -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+ 
+    <!-- Menú desplegable -->
+    <div class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#">Huéspedes</a>
+      <a href="#">Empleados</a>
+      <a href="#">Habitaciones</a>
+      <a href="#">Eventos</a>
+      <a href="#">Ubicación</a>
+      <a href="#">Configuración</a>
+    </div>
+  </nav>
+ 
+  <!-- FILTROS -->
+  <header>
+    <h1>Catálogo de Videojuegos</h1>
+    <input type="text" id="search" placeholder="Buscar videojuegos...">
+    <select id="platformFilter">
+      <option value="todas">Todas las plataformas</option>
+      <option value="PC">PC</option>
+      <option value="PS5">PS5</option>
+      <option value="Xbox">Xbox</option>
+    </select>
+  </header>
+</body>
+</html>

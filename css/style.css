@@ -1,0 +1,144 @@
+:root {
+    --fondo-principal: #121212;
+    --fondo-card: #1e1e1e;
+    --acento: #03dac6;
+    --acento-hover: #01bfa5;
+    --texto-secundario: #bbb;
+  }
+
+  body {
+    background: var(--fondo-principal);
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  /* NAVBAR */
+  nav {
+    background: #1e1e1e;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  nav a.logo {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background: var(--fondo-card);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.3rem 0;
+  }
+
+  .menu-toggle:checked + label + .nav-links {
+    display: flex;
+  }
+
+  /* BUSCADOR */
+  header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+  }
+
+  header input, header select {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+  }
+
+  /* GRID DE JUEGOS */
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .card {
+    background: var(--fondo-card);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .card h2 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+  }
+
+  .price {
+    color: var(--acento);
+    font-weight: bold;
+  }
+
+  .card button {
+    background: var(--acento);
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .card button:hover {
+    background: var(--acento-hover);
+  }
+
+  /* Siempre hamburguesa, no importa tamaño */
+  @media (min-width: 768px) {
+    .nav-links {
+      top: 70px;
+      right: 2rem;
+    }
+  }
