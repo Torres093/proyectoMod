@@ -32,13 +32,16 @@
     <h1>Juegos</h1>
 
     <!-- Formulario -->
-    <form id="persona-form" class="persona-form">
+    <form id="juegoForm" class="juegoForm">
       <div class="flex">
-        <label for="nombre">Nombre:
-          <input type="text" id="nombre" required />
+        <label for="nombre">Titulo:
+          <input type="text" id="titulo" required />
         </label>
-        <label for="telefono">Teléfono:
-          <input type="tel" id="telefono" required />
+        <label for="precio">Precio:
+          <input type="number" id="precio" min="0" required />
+        </label>
+        <label for="genero">Genero: 
+            <input type="text"  id="genero" required>
         </label>
         <label for="imagen-file">Imagen:
           <input type="file" id="imagen-file" accept="image/*" />
@@ -49,7 +52,7 @@
       <input type="hidden" id="imagen-url" />
 
       <!-- Guarda el ID de la persona que se está editando (vacío en modo "agregar") -->
-      <input type="hidden" id="persona-id" />
+      <input type="hidden" id="juego-id" />
 
       <!-- Botón principal para agregar o actualizar un registro -->
       <button type="submit" id="btn-submit">Agregar</button>
@@ -70,7 +73,7 @@
           <th>Precio</th>
         </tr>
       </thead>
-      <tbody id="personas-tbody">
+      <tbody id="juegos-tbody">
         <!-- inyectado por script -->
       </tbody>
     </table>
